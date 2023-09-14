@@ -7,10 +7,10 @@
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-3">Payroll</h1>
-    {{-- <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('payroll.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.payroll.create') : route('hr.payroll.create') ) }}" class="btn btn-primary">
+    <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('payroll.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.payroll.create') : route('hr.payroll.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add New') }}</span>
-    </a> --}}
+    </a>
   </div>
 @endsection
 

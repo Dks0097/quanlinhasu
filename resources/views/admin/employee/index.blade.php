@@ -2,7 +2,7 @@
 {{-- @extends('admin') --}}
 
 @section('title')
-    {{ __('Manage Employees') }}
+    {{ __('Quản lí nhân viên') }}
 @endsection
 
 @section('header')
@@ -10,7 +10,7 @@
     <h1 class="h3 mb-3">Manage Employee</h1>
     <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.create') : route('hr.employee.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
-      <span class="ps-1">{{ __('Add New') }}</span>
+      <span class="ps-1">{{ __('Thêm mới') }}</span>
     </a>
   </div>
 @endsection
@@ -51,9 +51,11 @@
                     <i class="fas fa-eye"></i>
                   </a>
                   <form action="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.destroy', $employee->id) : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.destroy', $employee->id) : route('hr.employee.destroy', $employee->id) ) }}" method="post">
-                    <a href="#" class="btn btn-danger btn-sm" onclick="del(event, this)">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="del(event, this)">
                       <i class="fas fa-trash-alt"></i>
-                    </a>
+                    </button>
                   </form>
                 </td>
               </tr>

@@ -10,35 +10,35 @@
         <span class="align-middle" style="font-size: 0.85rem;">New Items</span>
       </a>
       <div class="dropdown-menu py-0" aria-labelledby="itemsDropdown">
-        <div class="dropdown-menu-header">{{ __('Add New Opion') }}</div>
+        <div class="dropdown-menu-header">{{ __('Thêm mới') }}</div>
         <div class="list-group">
           <a href="{{ route('department.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('Department') }}</span>
+            <span class="text-dark ps-2">{{ __('Bộ phận') }}</span>
           </a>
           <a href="{{ route('designation.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('Designation') }}</span>
+            <span class="text-dark ps-2">{{ __('Chức vụ') }}</span>
           </a>
           <a href="{{ route('employee.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('Employee') }}</span>
+            <span class="text-dark ps-2">{{ __('Nhân viên') }}</span>
           </a>
           <a href="{{ route('attendance.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('Attendance') }}</span>
+            <span class="text-dark ps-2">{{ __('Chấm công') }}</span>
           </a>
           <a href="{{ route('leaves.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('Leave') }}</span>
+            <span class="text-dark ps-2">{{ __('Nghỉ phép') }}</span>
           </a>
           <a href="{{ route('payroll.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('Payroll') }}</span>
+            <span class="text-dark ps-2">{{ __('Lương') }}</span>
           </a>
           <a href="{{ route('user.create') }}" class="list-group-item">
             <i class="fas fa-plus align-middle"></i>
-            <span class="text-dark ps-2">{{ __('User') }}</span>
+            <span class="text-dark ps-2">{{ __('Người dùng') }}</span>
           </a>
         </div>
       </div>

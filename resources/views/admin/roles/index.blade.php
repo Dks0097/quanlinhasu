@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Manage Roles') }}
+  {{ __('Quản lí quyền hạn') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3">{{ __('Manage Roles') }}</h1>
-    <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('roles.create')}}" class="btn btn-primary">
+    <h1 class="h3">{{ __('Quản lí quyền hạn') }}</h1>
+    <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('roles.create'):''}}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add new') }}</span>
     </a>
@@ -19,17 +19,17 @@
     <div class="col-12">
       <div class="card flex-fill">
         <div class="card-header">              
-          <h5 class="card-title mb-0">{{ __('Roles DataTable') }}</h5>
+          <h5 class="card-title mb-0">{{ __('Bảng quyền hạn') }}</h5>
         </div>
         <table class="table table-hover my-0 data-table">
           <thead>
             <tr>
               <th class="d-none d-xl-table-cell">{{ __('SL') }}</th>
-              <th>{{ __('Role Title') }}</th>
-              <th class="d-none d-xl-table-cell">{{ __('Role Slug') }}</th>
-              <th>{{ __('Status') }}</th>
-              <th class="d-none d-md-table-cell">{{ __('Date Created') }}</th>
-              <th>{{ __('Action') }}</th>
+              <th>{{ __('Tên quyền') }}</th>
+              <th class="d-none d-xl-table-cell">{{ __('Vai trò') }}</th>
+              <th>{{ __('Tình trạng') }}</th>
+              <th class="d-none d-md-table-cell">{{ __('Ngày tạo') }}</th>
+              <th>{{ __('Thao tác') }}</th>
             </tr>
           </thead>
           <tbody>
@@ -50,18 +50,19 @@
                   @endif
                 </td>
                 <td class="d-none d-md-table-cell">{{ $role->created_at->diffforhumans() }}</td>
-                <td width="90px">
-                  <form action="{{ Auth::user()->role->slug === 'super-admin' ? route('roles.edit', $role->id)  }}" method="post">
+                <td width="90px" class="d-flex">
+                  <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('roles.edit', $role->id) : ''  }}" class="btn btn-outline-primary btn-sm me-1">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <form action="{{ Auth::user()->role->slug === 'super-admin' ? route('roles.destroy', $role->id): ''  }}" method="post">
                     @csrf
                     @method("delete")
-                    <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('roles.destroy', $role->id)  }}" class="btn btn-outline-primary btn-sm">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-danger btn-sm" onclick="del(event, this)" >
+                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="del(event, this)">
                       <i class="fas fa-trash-alt"></i>
-                    </a>
+                    </button>
                   </form>
                 </td>
+                
               </tr>
             @empty
             <tr>

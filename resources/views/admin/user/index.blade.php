@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ __('Manage user') }}
+    {{ __('Quản lí người dùng') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3">{{ __('Manage user') }}</h1>
+    <h1 class="h3">{{ __('Quản lí người dùng') }}</h1>
     <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('user.create') : route('admin.users.create')  }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
-      <span class="ps-1">{{ __('Add new') }}</span>
+      <span class="ps-1">{{ __('Thêm mới') }}</span>
     </a>
   </div>
 @endsection
@@ -19,7 +19,7 @@
     <div class="col-12">
       <div class="card flex-fill">
         <div class="card-header">              
-          <h5 class="card-title mb-0">{{ __('User DataTable') }}</h5>
+          <h5 class="card-title mb-0">{{ __('Bảng người dùng') }}</h5>
         </div>
         <table class="table table-hover my-0 data-table">
           <thead>
@@ -28,9 +28,9 @@
               <th>{{ __('Name') }}</th>
               <th class="d-none d-xl-table-cell" >{{ __('Email') }}</th>
               <th class="d-none d-xl-table-cell">{{ __('Phone') }}</th>
-              <th>{{ __('User Role') }}</th>
-              <th>{{ __('Status') }}</th>
-              <th>{{ __('Action') }}</th>
+              <th>{{ __('Quyền người dùng') }}</th>
+              <th>{{ __('Tình trạng') }}</th>
+              <th>{{ __('Thao tác') }}</th>
             </tr>
           </thead>
           <tbody>
