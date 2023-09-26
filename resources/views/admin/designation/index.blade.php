@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Manage Designations') }}
+  {{ __('Quản lý chỉ định') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-3">Manage Designations</h1>
+    <h1 class="h3 mb-3">Quản lý chỉ định</h1>
     <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('designation.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.designation.create') : route('hr.designation.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add New') }}</span>
@@ -22,9 +22,9 @@
         <thead>
           <tr>
             <th scope="col">SL</th>
-            <th scope="col">Designation Title</th>
+            <th scope="col">tên chỉ định</th>
             <th scope="col">Status</th>
-            <th scope="col">Date Created</th>
+            <th scope="col">Ngày tạo</th>
             <th scope="col">Action</th>
           </tr>
         </thead>

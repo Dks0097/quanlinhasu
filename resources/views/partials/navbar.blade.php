@@ -51,13 +51,13 @@
         <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
           <div class="position-relative">
             <i class="align-middle" data-feather="bell"></i>
-            <span class="indicator">4</span>
+            <span class="indicator">2</span>
           </div>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
           <div class="dropdown-menu-header">2 New Notifications</div>
           <div class="list-group">
-            <a href="#" class="list-group-item">
+            {{-- <a href="#" class="list-group-item">
               <div class="row g-0 align-items-center">
                 <div class="col-2">
                   <i class="text-danger" data-feather="alert-circle"></i>
@@ -103,7 +103,7 @@
                   <div class="text-muted small mt-1">14h ago</div>
                 </div>
               </div>
-            </a>
+            </a> --}}
           </div>
           <div class="dropdown-menu-footer">
             <a href="#" class="text-muted">Show all notifications</a>
@@ -121,7 +121,7 @@
             <div class="position-relative">4 New Messages</div>
           </div>
           <div class="list-group">
-            <a href="#" class="list-group-item">
+            {{-- <a href="#" class="list-group-item">
               <div class="row g-0 align-items-center">
                 <div class="col-2">
                   <img src="{{ asset('img/avatars/avatar-5.jpg')}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker" />
@@ -168,7 +168,7 @@
                   <div class="text-muted small mt-1">5h ago</div>
                 </div>
               </div>
-            </a>
+            </a> --}}
           </div>
           <div class="dropdown-menu-footer">
             <a href="#" class="text-muted">Show all messages</a>

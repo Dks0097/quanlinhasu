@@ -7,7 +7,7 @@
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-3">Manage Employee</h1>
+    <h1 class="h3 mb-3">Quản lí nhân viên</h1>
     <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.create') : route('hr.employee.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Thêm mới') }}</span>
@@ -20,16 +20,16 @@
     <div class="col-12">
       <div class="card flex-fill">
         <div class="card-header">
-          <h5 class="card-title mb-0">Employee DataTable</h5>
+          <h5 class="card-title mb-0">Bảng dữ liệu nhân viên</h5>
         </div>
         <table class="table data-table">
           <thead>
             <tr>
               <th>SL</th>
-              <th>Name of Employee</th>
-              <th>Department</th>
-              <th>Schedule</th>
-              <th>Date Joined</th>
+              <th>Tên nhân viên</th>
+              <th>Phòng ban</th>
+              <th>ca làm việc</th>
+              <th>Ngày vào làm</th>
               <th>Actions</th>
             </tr>
           </thead>

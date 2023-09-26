@@ -28,7 +28,7 @@
 				</div>
 			  </div>
 			  <h1 class="mt-3 mb-3">
-				{{ App\Models\Schedule::count(); }}
+				{{ App\Models\Schedule::count() }}
 			  </h1>
 			</div>
 		  </div>
@@ -49,7 +49,7 @@
 				</div>
 			  </div>
 			  <h1 class="mt-3 mb-3">
-				{{ App\Models\Department::where('status', 1)->count(); }}
+				{{ App\Models\Department::where('status', 1)->count() }}
 			  </h1>
 			</div>
 		  </div>
@@ -70,7 +70,7 @@
 				</div>
 			  </div>
 			  <h1 class="mt-3 mb-3">
-				{{ App\Models\Employee::where('status', 1)->count(); }}
+				{{ App\Models\Employee::where('status', 1)->count() }}
 			  </h1>
 			</div>
 		  </div>
@@ -91,7 +91,7 @@
 				</div>
 			  </div>
 			  <h1 class="mt-3 mb-3">
-				{{ App\Models\User::where('status', 1)->count(); }}
+				{{ App\Models\User::where('status', 1)->count() }}
 			  </h1>
 			</div>
 		  </div>

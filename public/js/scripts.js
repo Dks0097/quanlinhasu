@@ -18,7 +18,7 @@ $(document).ready(function() {
 // Delete Data
 function del(e, t) {
   e.preventDefault();
-  let c = confirm("Are you sure?");
+  let c = confirm("Bạn muốn xóa?");
   if (!c) return;
   t.closest('form').submit();
 }

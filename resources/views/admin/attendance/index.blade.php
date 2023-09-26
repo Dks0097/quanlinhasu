@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ __('Manage attendance') }}
+    {{ __('Quản lí chấm công') }}
 @endsection
 
 @section('header')
+<h1 class="h3">{{ __('Chấm công hàng ngày') }}</h1>
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3">{{ __('Daily attendance') }}</h1>
     {{-- <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('attendance.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.attendance.create') : route('moderator.attendance.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add new') }}</span>
@@ -19,7 +19,7 @@
   <div class="col-12">
     <div class="card flex-fill">
       <div class="card-header">              
-        <h5 class="card-title mb-0">{{ __('Attendace of the Month August') }}</h5>
+        <h5 class="card-title mb-0">{{ __('Chấm công tháng 9') }}</h5>
       </div>
       <div class="table-responsive">
         <table class="table table-hover my-0 table-bordered">
@@ -27,10 +27,10 @@
           <thead>
             <tr>
   
-                <th scope="col" width="10%">Employee Name</th>
+                <th scope="col" width="10%">Tên nhân viên</th>
                 
-                <th scope="col">Employee Position</th>
-                <th scope="col">Employee ID</th>
+                <th scope="col">Chúc vụ nhân viên</th>
+                <th scope="col">ID nhân viên</th>
                 @php
                     $today = today();
                     $dates = [];

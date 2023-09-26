@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ __('Add New user') }}
+    {{ __('Tạo lịch trình mới') }}
 @endsection
 
 @section('header')
-  <h1 class="h3 mb-3">Create Schedule</h1>
+  <h1 class="h3 mb-3">Tạo lịch biểu</h1>
 @endsection
 
 @section('content')
@@ -16,18 +16,18 @@
           @csrf
           <div class="card flex-fill">
             <div class="card-header">
-              <h5 class="card-title mb-0">{{ __('Create New Schedule') }}</h5>
+              <h5 class="card-title mb-0">{{ __('Tạo lịch trình mới') }}</h5>
             </div>
             <div class="card-body py-0">
               <div class="row g-3">
                 <div class="col-12">
-                  <input type="text" name="title" class="form-control" id="title" placeholder="{{ __('title') }}" value="{{ old('title') }}" required />
+                  <input type="text" name="title" class="form-control" id="title" placeholder="{{ __('tiêu đề') }}" value="{{ old('title') }}" required />
                 </div>
                 <div class="col-12">
-                    <input type="time" name="time_in" class="form-control" id="title" placeholder="{{ __('time_in') }}" value="{{ old('time_in') }}" required />
+                    <input type="time" name="time_in" class="form-control" id="title" placeholder="{{ __('giờ vào') }}" value="{{ old('time_in') }}" required />
                   </div>
                   <div class="col-12">
-                    <input type="time" name="time_out" class="form-control" id="title" placeholder="{{ __('time_out') }}" value="{{ old('time_out') }}" required />
+                    <input type="time" name="time_out" class="form-control" id="title" placeholder="{{ __('giờ ra') }}" value="{{ old('time_out') }}" required />
                   </div>
                
               </div>
@@ -37,13 +37,13 @@
                 <div class="col-6 d-grid">
                   <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('schedule.index') : (Auth::user()->role->slug === 'administrator' ? route('admin.schedule.index', $schedule->id) : route('moderator.schedule.index', $schedule->id) ) }}" class="btn btn-outline-secondary" >
                     <i class="align-middle me-1" data-feather="arrow-left"></i>
-                    <span class="ps-1">{{ __('Discard') }}</span>
+                    <span class="ps-1">{{ __('Loại bỏ') }}</span>
                   </a>
                 </div>
                 <div class="col-6 d-grid">
                   <button type="submit" class="btn btn-outline-secondary" >
                     <i class="align-middle me-1" data-feather="plus"></i>
-                    <span class="ps-1">{{ __('Create New') }}</span>
+                    <span class="ps-1">{{ __('Tạo mới') }}</span>
                   </button>
                 </div>
               </div>

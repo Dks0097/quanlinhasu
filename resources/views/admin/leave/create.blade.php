@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Add Leave Records') }}
+  {{ __('Thêm Nghỉ phép') }}
 @endsection
 
 @section('header')
-  <h1 class="h3 mb-3">Dashboard</h1>
+  <h1 class="h3 mb-3">Nghỉ phép</h1>
 @endsection
 
 @section('content')
@@ -20,11 +20,11 @@
           <div class="card-body">
             <div class="row g-3">
               <div class="col-12">
-                <label for="start_date">Leave Title</label>
+                <label for="start_date">tiêu đề</label>
                 <input type="text" name="title" id="start_date" class="form-control" required>
               </div>
               <div class="col-12">
-                <label for="employee_id">Employee</label>
+                <label for="employee_id">Nhân viên</label>
                 <select name="employee_id" id="employee_id" class="form-control" required>
                   @foreach($employees as $employee)
                     <option value="{{ $employee->id }}">{{ $employee->firstname }} {{ $employee->lastname }}</option>
@@ -32,34 +32,34 @@
                 </select>
               </div>
               <div class="col-6">
-                <label for="start_date">Start Date</label>
+                <label for="start_date">Ngày bắt đầu</label>
                 <input type="date" name="start_date" id="start_date" class="form-control" required>
               </div>
               <div class="col-6">
-                <label for="end_date">End Date</label>
+                <label for="end_date">Ngày kết thúc</label>
                 <input type="date" name="end_date" id="end_date" class="form-control" required>
               </div>
               <div class="col-6">
-                <label for="leave_type">Leave Type</label>
+                <label for="leave_type">Loại nghỉ</label>
                 <select name="leave_type" id="leave_type" class="form-control" required>
-                  <option value="1">Vacation</option>
-                  <option value="2">Sick Leave</option>
-                  <option value="3">Emergency Leave</option>
-                  <option value="4">Involuntary Leave</option>
-                  <option value="5">Medical Leave</option>
-                  <option value="6">Casual Leave</option>
-                  <option value="7">Marriage Leave</option>
+                  <option value="1">Nghỉ</option>
+                  <option value="2">Nghỉ ốm</option>
+                  <option value="3">Nghỉ phép khẩn cấp</option>
+                  <option value="4">Nghỉ không lí do</option>
+                  <option value="5">nghỉ có giấy bệnh viện</option>
+                  <option value="6">Nghỉ thông thường</option>
+                  <option value="7">Nghỉ kết hôn</option>
                 </select>
               </div>
               <div class="col-6">
-                <label for="status">Leave Type</label>
+                <label for="status">Loại chấp thuận</label>
                 <select name="status" id="status" class="form-control" required>
-                  <option value="1">Apprived</option>
-                  <option value="0">Rejected</option>
+                  <option value="1">Chấp thuận</option>
+                  <option value="0">Không chấp thuận</option>
                 </select>
               </div>
               <div>
-                <label for="leave_reason">Leave Reason</label>
+                <label for="leave_reason">Lý do nghỉ</label>
                 <textarea name="leave_reason" class="form-control" id=""></textarea>
               </div>
             </div>

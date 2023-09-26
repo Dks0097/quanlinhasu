@@ -42,26 +42,26 @@
                 <input type="date" name="end_date" id="end_date" class="form-control" value="{{ $leave->end_date }}" required>
               </div>
               <div class="col-6">
-                <label for="leave_type">Leave Type</label>
+                <label for="leave_type">Loại nghỉ</label>
                 <select name="leave_type" id="leave_type" class="form-control" required>
-                  <option value="1" {{$leave->leave_type === 1 ? 'selected' : '' }} >Vacation</option>
-                  <option value="2" {{$leave->leave_type === 2 ? 'selected' : '' }} >Sick Leave</option>
-                  <option value="3" {{$leave->leave_type === 3 ? 'selected' : '' }} >Emergency Leave</option>
-                  <option value="4" {{$leave->leave_type === 4 ? 'selected' : '' }} >Involuntary Leave</option>
-                  <option value="5" {{$leave->leave_type === 5 ? 'selected' : '' }} >Medical Leave</option>
-                  <option value="6" {{$leave->leave_type === 6 ? 'selected' : '' }} >Casual Leave</option>
-                  <option value="7" {{$leave->leave_type === 7 ? 'selected' : '' }} >Marriage Leave</option>
+                  <option value="1" {{$leave->leave_type === 1 ? 'selected' : '' }} >CHọn nghỉ</option>
+                  <option value="2" {{$leave->leave_type === 2 ? 'selected' : '' }} >Nghỉ ốm</option>
+                  <option value="3" {{$leave->leave_type === 3 ? 'selected' : '' }} >Nghỉ phép khẩn cấp</option>
+                  <option value="4" {{$leave->leave_type === 4 ? 'selected' : '' }} >Nghỉ không lí do</option>
+                  <option value="5" {{$leave->leave_type === 5 ? 'selected' : '' }} >Nghỉ phép có giấy bệnh viện</option>
+                  <option value="6" {{$leave->leave_type === 6 ? 'selected' : '' }} >Nghỉ phép</option>
+                  <option value="7" {{$leave->leave_type === 7 ? 'selected' : '' }} >Nghỉ cưới </option>
                 </select>
               </div>
               <div class="col-6">
-                <label for="status">Leave Type</label>
+                <label for="status">Loại nghỉ</label>
                 <select name="status" id="status" class="form-control" required>
-                  <option value="1" {{$leave->status === 1 ? 'selected' : '' }} >Apprived</option>
-                  <option value="0" {{$leave->status === 2 ? 'selected' : '' }} >Rejected</option>
+                  <option value="1" {{$leave->status === 1 ? 'selected' : '' }} >Chấp thuận</option>
+                  <option value="0" {{$leave->status === 2 ? 'selected' : '' }} >Không chấp thuận</option>
                 </select>
               </div>
               <div>
-                <label for="leave_reason">Leave Reason</label>
+                <label for="leave_reason">Lý do</label>
                 <textarea name="leave_reason" class="form-control" id="">{{ $leave->leave_reason }}</textarea>
               </div>
             </div>

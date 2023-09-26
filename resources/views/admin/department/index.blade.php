@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Manage Departments') }}
+  {{ __('Quản lý các phòng ban') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-3">Manage Departments</h1>
+    <h1 class="h3 mb-3">Quản lý các phòng ban</h1>
     <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('department.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.department.create') : route('hr.department.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add New') }}</span>
@@ -22,9 +22,9 @@
         <thead>
           <tr>
             <th scope="col">SL</th>
-            <th scope="col">Department Title</th>
+            <th scope="col">Tên phòng</th>
             <th scope="col">Status</th>
-            <th scope="col">Date Created</th>
+            <th scope="col">Ngày thành lập</th>
             <th scope="col">Action</th>
           </tr>
         </thead>

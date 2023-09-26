@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ __('Manage Schedule') }}
+    {{ __('Quản lý lịch biểu') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3">{{ __('Manage Schedule') }}</h1>
+    <h1 class="h3">{{ __('Quản lý lịch biểu') }}</h1>
     <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('schedule.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.schedule.create') : route('moderator.schedule.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add new') }}</span>
@@ -26,9 +26,9 @@
             <thead>
                 <tr>
                   <th scope="col" >SL</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Time In</th>
-                  <th scope="col">Time Out</th>
+                  <th scope="col">tên ca</th>
+                  <th scope="col">thời gian vào</th>
+                  <th scope="col">thời gian ra</th>
                   <th scope="col" width="90">Action</th>
                 </tr>
             </thead>

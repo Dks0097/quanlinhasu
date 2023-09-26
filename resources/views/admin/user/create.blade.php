@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ __('Add New user') }}
+    {{ __('Thêm người dùng') }}
 @endsection
 
 @section('header')
-  <h1 class="h3 mb-3">Update User</h1>
+  <h1 class="h3 mb-3">Cập nhật người dùng</h1>
 @endsection
 
 @section('content')
@@ -16,18 +16,18 @@
           @csrf
           <div class="card flex-fill">
             <div class="card-header">
-              <h5 class="card-title mb-0">{{ __('Create New user') }}</h5>
+              <h5 class="card-title mb-0">{{ __('Tạo người dùng mới') }}</h5>
             </div>
             <div class="card-body py-0">
               <div class="row g-3">
                 <div class="col-12">
-                  <input type="text" name="name" class="form-control" id="title" placeholder="{{ __('Name') }}" value="{{ old('name') }}" required />
+                  <input type="text" name="name" class="form-control" id="title" placeholder="{{ __('tên') }}" value="{{ old('name') }}" required />
                 </div>
                 <div class="col-12">
                   <input type="email" name="email" class="form-control" id="title" placeholder="{{ __('Email') }}" value="{{ old('email') }}" required />
                 </div>
                 <div class="col-12">
-                  <input type="tel" name="phone" class="form-control" id="phone" placeholder="{{ __('Primary Phone') }}" value="{{ old('phone') }}" required oninput="formatPhoneNumber(this)" maxlength="19" />
+                  <input type="tel" name="phone" class="form-control" id="phone" placeholder="{{ __('Số điện thoại') }}" value="{{ old('phone') }}" required oninput="formatPhoneNumber(this)" maxlength="19" />
                   {{-- <input type="text" name="phone" class="form-control" id="slug" placeholder="{{ __('Phone') }}" value="{{ old('phone') }}" /> --}}
                 </div>
                 <div class="col-6">
@@ -38,7 +38,7 @@
                 </div>  
                 <div class="col-6">
                   <select name="role_id" class="form-control" id="role">
-                    <option value="">{{ __('-- User Role --') }}</option>
+                    <option value="">{{ __('-- Vai trò  --') }}</option>
                     @foreach ($roles as $role)
                       <option value="{{ $role->id }}">{{ $role->title }}</option>
                     @endforeach
@@ -47,8 +47,8 @@
                 <div class="col-6">
                   <select name="status" class="form-control" id="status">
                     <option value="">{{ __('-- Choose Status --') }}</option>
-                    <option value="1">{{ __('Enable') }}</option>
-                    <option value="0">{{ __('Disable') }}</option>
+                    <option value="1">{{ __('Bật') }}</option>
+                    <option value="0">{{ __('Vô hiệu hóa') }}</option>
                   </select>
                 </div>
               </div>
@@ -58,13 +58,13 @@
                 <div class="col-6 d-grid">
                   <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('user.index') : route('admin.user.index')}}" class="btn btn-outline-secondary" >
                     <i class="align-middle me-1" data-feather="arrow-left"></i>
-                    <span class="ps-1">{{ __('Discard') }}</span>
+                    <span class="ps-1">{{ __('Loại bỏ') }}</span>
                   </a>
                 </div>
                 <div class="col-6 d-grid">
                   <button type="submit" class="btn btn-outline-secondary" >
                     <i class="align-middle me-1" data-feather="plus"></i>
-                    <span class="ps-1">{{ __('Create New') }}</span>
+                    <span class="ps-1">{{ __('Tạo mới') }}</span>
                   </button>
                 </div>
               </div>

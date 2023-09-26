@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Manage payroll') }}
+  {{ __('Quản lí Tiền lương') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-3">Payroll</h1>
-    <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('payroll.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.payroll.create') : route('hr.payroll.create') ) }}" class="btn btn-primary">
+    <h1 class="h3 mb-3">Tiền lương</h1>
+    <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('payroll.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.payroll.create') : route('manager.payroll.create') ) }}" class="btn btn-primary">
       <i class="fas fa-plus"></i>
       <span class="ps-1">{{ __('Add New') }}</span>
     </a>
@@ -25,27 +25,27 @@
           <table class="table table-hover my-0 table-bordered table-sm">
             <thead>
               <tr>
-                <th scope="col" width="200px">{{ __('Employee Name') }}</th>
-                <th scope="col">{{ __('Designation') }}</th>
-                <th scope="col">{{ __('Basic Salary') }}</th>
-                <th scope="col">{{ __('House Rent') }}</th>
-                <th scope="col">{{ __('Medical') }}</th>
-                <th scope="col">{{ __('Transport') }}</th>
-                <th scope="col">{{ __('Phone Bill') }}</th>
-                <th scope="col">{{ __('Internet') }}</th>
-                <th scope="col">{{ __('Special') }}</th>
-                <th scope="col">{{ __('Bonus') }}</th>
-                <th scope="col">{{ __('Present') }}</th>
-                <th scope="col">{{ __('Absent') }}</th>
-                <th scope="col">{{ __('Gross Salary') }}</th>
+                <th scope="col" width="200px">{{ __('Tên nhân viên') }}</th>
+                <th scope="col">{{ __('Chức vụ') }}</th>
+                <th scope="col">{{ __('Lương cơ bản') }}</th>
+                <th scope="col">{{ __('Tiền thuê nhà') }}</th>
+                <th scope="col">{{ __('y tế') }}</th>
+                <th scope="col">{{ __('di chuyển') }}</th>
+                <th scope="col">{{ __('tiền điện thoại') }}</th>
+                <th scope="col">{{ __('Mạng') }}</th>
+                <th scope="col">{{ __('Khác') }}</th>
+                <th scope="col">{{ __('tiền thưởng') }}</th>
+                <th scope="col">{{ __('Số ngày làm') }}</th>
+                <th scope="col">{{ __('vắng') }}</th>
+                <th scope="col">{{ __('Lương gộp') }}</th>
                 {{-- <th scope="col">Overtime</th> --}}
-                <th scope="col">{{ __('Provident Fund') }}</th>
+                <th scope="col">{{ __('Quỹ dự phòng') }}</th>
                 <th scope="col">{{ __('Advanced') }}</th>
-                <th scope="col">{{ __('Tax') }}</th>
-                <th scope="col">{{ __('Life insurance') }} </th>
-                <th scope="col">{{ __('Health insurance') }}</th>
-                <th scope="col">{{ __('Deduction') }}</th>
-                <th scope="col">{{ __('Net Salary') }}</th>
+                <th scope="col">{{ __('thuế') }}</th>
+                <th scope="col">{{ __('bảo hiểm nhân thọ') }} </th>
+                <th scope="col">{{ __('Bảo hiểm y tế') }}</th>
+                <th scope="col">{{ __('lương ') }}</th>
+                <th scope="col">{{ __('Thực nhận') }}</th>
               </tr>
             </thead>
       

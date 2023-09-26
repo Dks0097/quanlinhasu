@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Manage payroll') }}
+  {{ __('Quản lí Tiền lương') }}
 @endsection
 
 @section('header')
   <div class="d-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-3">Payroll</h1>
+    <h1 class="h3 mb-3">Tiền lương</h1>
     <a href="{{ route('payroll.report') }}" class="btn btn-secondary">
       <i class="fas fa-arrow-left"></i>
       <span class="ps-1">{{ __('Back') }}</span>
@@ -19,7 +19,7 @@
   <div class="col-12">
     <div class="card flex-fill">
       <div class="card-header">              
-        <h5 class="card-title mb-0">{{ __('Employees Daily Attendance') }}</h5>
+        <h5 class="card-title mb-0">{{ __('Nhân viên tham dự hàng ngày') }}</h5>
       </div>
       <div class="card-body">
         <form action="{{ route('generate.payroll') }}" method="POST">
@@ -28,26 +28,26 @@
             <div class="col-3">
               {{-- <label for="year">Select Year:</label> --}}
               <select name="year" class="form-select" id="year">
-                <option value="">{{ __('Choose Year') }}</option>
+                <option value="">{{ __('Chọn năm') }}</option>
                 <option value="2023">{{ __('2023') }}</option>
               </select>
             </div>
             <div class="col-3">
               {{-- <label for="month">Select Month:</label> --}}
               <select name="month" class="form-select" id="month">
-                <option value="">{{ __('Choose Month') }}</option>
-                <option value="1">{{ __('January') }}</option>
-                <option value="2">{{ __('February') }}</option>
-                <option value="3">{{ __('March') }}</option>
-                <option value="4">{{ __('April') }}</option>
-                <option value="5">{{ __('May') }}</option>
-                <option value="6">{{ __('June') }}</option>
-                <option value="7">{{ __('July') }}</option>
-                <option value="8">{{ __('August') }}</option>
-                <option value="9">{{ __('September') }}</option>
-                <option value="10">{{ __('October') }}</option>
-                <option value="11">{{ __('November') }}</option>
-                <option value="12">{{ __('December') }}</option>
+                <option value="">{{ __('Chọn tháng') }}</option>
+                <option value="1">{{ __('Tháng 1') }}</option>
+                <option value="2">{{ __('Tháng 2') }}</option>
+                <option value="3">{{ __('Tháng 3') }}</option>
+                <option value="4">{{ __('Tháng 4') }}</option>
+                <option value="5">{{ __('Tháng 5') }}</option>
+                <option value="6">{{ __('Tháng 6') }}</option>
+                <option value="7">{{ __('Tháng 7') }}</option>
+                <option value="8">{{ __('Tháng 8') }}</option>
+                <option value="9">{{ __('Tháng 9') }}</option>
+                <option value="10">{{ __('Tháng 10') }}</option>
+                <option value="11">{{ __('Tháng 11') }}</option>
+                <option value="12">{{ __('Tháng 12') }}</option>
               </select>
             </div>
             <div class="col-6">
@@ -62,25 +62,25 @@
           <table class="table table-hover my-0 table-bordered">
             <thead>
               <tr>
-                <th scope="col" width="200px">{{ __('Employee Name') }}</th>
-                <th scope="col">{{ __('Employee Position') }}</th>
-                <th scope="col">Basic Salary</th>
-                <th scope="col">House rent</th>
-                <th scope="col">Medical Allowance</th>
-                <th scope="col">Transport Allowance</th>
-                <th scope="col">special Allowance</th>
-                <th scope="col">Bonus</th>
-                <th scope="col">Present</th>
-                <th scope="col">Absent</th>
-                <th scope="col">Gross Salary</th>
+                <th scope="col" width="200px">{{ __('Tên nhân viên') }}</th>
+                <th scope="col">{{ __('Vị trí nhân viên') }}</th>
+                <th scope="col">Lương cơ bản</th>
+                <th scope="col">Tiền thuê nhà</th>
+                <th scope="col">Trợ cấp y tế</th>
+                <th scope="col">Phụ cấp di chuyển</th>
+                <th scope="col">Phụ cấp đặc biệt</th>
+                <th scope="col">Tiền thưởng</th>
+                <th scope="col">Có mặt</th>
+                <th scope="col">Vắng mặt</th>
+                <th scope="col">Tiền thưởng</th>
                 {{-- <th scope="col">Overtime</th> --}}
-                <th scope="col">Provident Fund</th>
+                <th scope="col">Quỹ dự phòng</th>
                 <th scope="col">Advanced</th>
-                <th scope="col">Tax</th>
-                <th scope="col">Life insurance </th>
-                <th scope="col">Health insurance</th>
-                <th scope="col">Deduction</th>
-                <th scope="col">Net Salary</th>
+                <th scope="col">Thuế</th>
+                <th scope="col">Bảo hiểm nhân thọ</th>
+                <th scope="col">Bảo hiểm y tế</th>
+                <th scope="col">Lưong</th>
+                <th scope="col">thưc nhận</th>
               </tr>
             </thead>
                 <tbody>

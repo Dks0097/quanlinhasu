@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('title')
-  {{ __('Attendance Report') }}
+  {{ __('Báo cáo chấm công') }}
 @endsection
 
 @section('header')
-  <h1 class="h3 mb-3">{{ __('Attendance Report') }}</h1>
+  <h1 class="h3 mb-3">{{ __('Báo cáo chấm công') }}</h1>
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
     <div class="col-12">
       <div class="card flex-fill">
         <div class="card-header">
-          <h5 class="card-title mb-0">{{ __('Monthly Attendance Report of August') }}</h5>
+          <h5 class="card-title mb-0">{{ __('Báo cáo chấm công tháng 9') }}</h5>
         </div>
         <div class="card-body">
           <div class="mb-4">
@@ -24,9 +24,9 @@
             <table class="table table-bordered table-striped data-table">
               <thead>
                 <tr>
-                  <th>{{ __('Employee Name') }}</th>
-                  <th>{{ __('Employee Position') }}</th>
-                  <th>{{ __('Employee ID') }}</th>
+                  <th>{{ __('Tên nhân viên') }}</th>
+                  <th>{{ __('Chức vụ nhân viên') }}</th>
+                  <th>{{ __('ID Nhân viên') }}</th>
                   @php 
                     $today = today();
                     $dates = [];
