@@ -13,7 +13,7 @@
     <div class="col-12">
       <div class="card flex-fill">
         <div class="card-header">
-          <h5 class="card-title mb-0">{{ __('Báo cáo chấm công tháng 9') }}</h5>
+          <h5 class="card-title mb-0">{{ __('Báo cáo chấm công tháng 10') }}</h5>
         </div>
         <div class="card-body">
           <div class="mb-4">

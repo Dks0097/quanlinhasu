@@ -60,7 +60,7 @@
         <li class="sidebar-item">
         <a class="sidebar-link" href="{{ Auth::user()->role->slug === 'super-admin' ? route('designation.index') : (Auth::user()->role->slug === 'administrator' ? route('admin.designation.index') : route('hr.designation.index') ) }}">
           <i class="fa-solid fa-file-lines"></i>
-          <span class="align-middle">{{ __('Quản lý chỉ định') }}</span>
+          <span class="align-middle">{{ __('Quản lý chức vụ') }}</span>
         </a>
         </li>
       @endif

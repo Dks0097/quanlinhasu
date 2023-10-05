@@ -15,8 +15,8 @@ class ScheduleSeeder extends Seeder
     {
         //
         $schedules=[
-            ['title' => 'Shift-01', 'time_in' => '08:00:00', 'time_out' => '17:00:00'],
-            ['title' => 'Shift-02', 'time_in' => '18:00:00', 'time_out' => '03:00:00'],
+            ['title' => 'CA-01', 'time_in' => '08:00:00', 'time_out' => '17:00:00'],
+            ['title' => 'CA-02', 'time_in' => '18:00:00', 'time_out' => '03:00:00'],
         ];
 
         foreach ($schedules as $schedule) {

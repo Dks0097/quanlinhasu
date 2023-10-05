@@ -5,7 +5,7 @@
 @endsection
 
 @section('header')
-  <h1 class="h3 mb-3">Create Department</h1>
+  <h1 class="h3 mb-3">Tạo phòng ban</h1>
 @endsection
 
 @section('content')
@@ -16,16 +16,16 @@
           @csrf
           <div class="card flex-fill">
             <div class="card-header">
-              <h5 class="card-title mb-0">{{ __('Create New Department') }}</h5>
+              <h5 class="card-title mb-0">{{ __('Tạo phòng ban mới') }}</h5>
             </div>
             <div class="card-body">
               <div class="row g-3">
                 <div class="col-12">
-                  <label for="title">Department Title</label>
+                  <label for="title">Tên phòng ban</label>
                   <input type="text" name="title" class="form-control" id="title" required />
                 </div>
                 <div class="col-12">
-                  <label for="description">Description</label>
+                  <label for="description">Chi tiết</label>
                   <textarea name="description" class="form-control" id="description" cols="30" rows="6"></textarea>
                 </div>
                 <div class="col-12">

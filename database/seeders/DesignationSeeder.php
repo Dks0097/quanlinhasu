@@ -15,21 +15,21 @@ class DesignationSeeder extends Seeder
     {
         //
         $designations = [
-            [ 'title' => 'Chief Executive Officer (CEO)', 'status' => 1 ],
-            [ 'title' => 'Chief Operating Officer (COO)', 'status' => 1 ],
-            [ 'title' => 'Chief Information Officer (CIO)', 'status' => 1 ],
-            [ 'title' => 'Vice President', 'status' => 1 ],
-            [ 'title' => 'Director', 'status' => 1 ],
-            [ 'title' => 'Senior Project Manager', 'status' => 1 ],
-            [ 'title' => 'Senior Software Engineer', 'status' => 1 ],
-            [ 'title' => 'Senior Financial Analyst', 'status' => 1 ],
-            [ 'title' => 'IT Support Specialist', 'status' => 1 ],
-            [ 'title' => 'HR Generalist', 'status' => 1 ],
-            [ 'title' => 'Operations Manager', 'status' => 1 ],
-            [ 'title' => 'Product Manager', 'status' => 1 ],
-            [ 'title' => 'Software Engineer', 'status' => 1 ],
-            [ 'title' => 'Financial Planner', 'status' => 1 ],
-            [ 'title' => 'Data Analyst', 'status' => 1 ],
+            [ 'title' => 'Giám đốc điều hành (CEO)', 'status' => 1 ],
+           
+            [ 'title' => 'Giám đốc Thông tin (CIO)', 'status' => 1 ],
+            [ 'title' => 'Phó chủ tịch', 'status' => 1 ],
+            [ 'title' => 'Giám đốc', 'status' => 1 ],
+            [ 'title' => 'Quản lý dự án cấp cao', 'status' => 1 ],
+            [ 'title' => 'Kỹ sư phần mềm cao cấp', 'status' => 1 ],
+            [ 'title' => 'Chuyên viên phân tích tài chính cao cấp', 'status' => 1 ],
+            [ 'title' => 'Chuyên gia hỗ trợ CNTT', 'status' => 1 ],
+            [ 'title' => 'Chuyên gia nhân sự tổng quát', 'status' => 1 ],
+            [ 'title' => 'Giám đốc điều hành', 'status' => 1 ],
+            [ 'title' => 'Giám đốc sản phẩm', 'status' => 1 ],
+            [ 'title' => 'Kỹ sư phần mềm', 'status' => 1 ],
+            [ 'title' => 'Người lập kế hoạch tài chính', 'status' => 1 ],
+            [ 'title' => 'Chuyên viên phân tích dữ liệu', 'status' => 1 ],
         ];
 
         foreach ($designations as $designation) {

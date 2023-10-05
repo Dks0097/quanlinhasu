@@ -36,8 +36,10 @@
             <tr>
               <th scope="row">{{ $loop->iteration }}</th>
               <td>{{ $leave->employee->firstname }}
-                {{ $leave->employee->lastname }}</td>
+                {{ $leave->employee->lastname }}
+              </td>
               <td>
+                
                 @if ($leave->leave_type === 1)
                   <span class="badge bg-info">CHọn nghỉ</span>
                 @elseif ($leave->leave_type === 2)

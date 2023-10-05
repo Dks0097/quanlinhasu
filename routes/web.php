@@ -94,6 +94,8 @@ Route::middleware('admin')->prefix('admin')->group( function () {
         Route::get('/create', [EmployeeController::class, 'create'])->name('admin.employee.create');
         Route::post('/', [EmployeeController::class, 'create'])->name('admin.employee.store');
         Route::get('/{id}/edit', [EmployeeController::class, 'edit'])->name('admin.employee.edit');
+        Route::get('/{id}/show', [EmployeeController::class, 'show'])->name('admin.employee.show');
+
         Route::put('/{id}', [EmployeeController::class, 'update'])->name('admin.employee.update');
         Route::delete('/{id}', [EmployeeController::class, 'destroy'])->name('admin.employee.destroy');
     });

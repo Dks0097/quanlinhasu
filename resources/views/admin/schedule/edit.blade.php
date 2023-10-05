@@ -5,7 +5,7 @@
 @endsection
 
 @section('header')
-  <h1 class="h3 mb-3">Update Schedule</h1>
+  <h1 class="h3 mb-3">Cập nhật lịch trình</h1>
 @endsection
 
 @section('content')
@@ -17,7 +17,7 @@
           @method('put')
           <div class="card flex-fill">
             <div class="card-header">
-              <h5 class="card-title mb-0">{{ __('Update Schedule') }}</h5>
+              <h5 class="card-title mb-0">{{ __('Cập nhật lịch trình') }}</h5>
             </div>
             <div class="card-body py-0">
               <div class="row g-3">

@@ -9,6 +9,7 @@ use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
 use App\Models\Designation;
 use App\Models\Schedule;
+use App\Models\User;
 
 class EmployeeController extends Controller
 {
@@ -31,7 +32,8 @@ class EmployeeController extends Controller
         $departments = Department::all();
         $designations = Designation::all();
         $schedules = Schedule::all();
-        return view('admin.employee.create', compact('departments', 'designations', 'schedules'));
+        $user = User::all();
+        return view('admin.employee.create', compact('departments', 'designations', 'schedules','user'));
     }
 
     /**

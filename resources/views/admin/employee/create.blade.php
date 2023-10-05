@@ -31,7 +31,15 @@
                   </div>
                   <div class="col-12">
                     <label for="email">{{ __('Địa chỉ Email') }}</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    <select name="email" class="form-control" id="religion">
+                    @foreach ($user as $item)
+                   
+                      <option value="">{{$item->email}}</option>
+                      
+                    
+                    @endforeach
+                  </select>
+                   
                   </div>
                   <div class="col-6">
                     <label for="phone">{{ __('Số điện thoại') }}</label>
