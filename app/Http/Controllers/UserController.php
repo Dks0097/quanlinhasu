@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMail;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -40,7 +43,27 @@ class UserController extends Controller
     //         $employee->salary()->save($salary);
     //      }
         User::create($request->all());
-        return back()->with('success', 'user crated successfully');
+        $email=$request->email;
+        $password=$request->password;
+        //validate
+
+        // kiểm tra có user có email như vậy không
+        
+        // dd($user);
+      
+            // gửi mật khẩu reset tới email
+           
+            $sentData = [
+                'title' => 'chào mừng đến với công ty',
+                'body' => 'tài khoản của bạn là:'.$email.'<br>'.'mặt khẩu của bạn là:'.$password,
+            ];
+          
+            Mail::to($request->user())->cc($email)->bcc($email)->send(new SendMail($sentData));
+            Session::flash('message', 'Send email successfully!');
+
+          
+       
+        return back()->with('success', 'Tạo người dùng thành công');
     }
 
     /**
@@ -77,7 +100,7 @@ class UserController extends Controller
         // $employee->salary()->save($salary);
         // return back()->with('success', 'user updated successfully');
         $user->update($request->all());
-        return back()->with('success', 'User updated successfully');
+        return back()->with('success', 'Sửa nhân viên thành công');
     }
 
     /**
